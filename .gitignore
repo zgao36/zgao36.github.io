@@ -1,0 +1,8 @@
+# Publish ONLY the website files. Everything else in this folder
+# (CV, transcript, certificates, reports, notes) stays private.
+*
+!.gitignore
+!.nojekyll
+!index.html
+!styles.css
+!main.js

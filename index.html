@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Peter Gao · Electrical Engineering, UBC</title>
+  <meta name="description" content="Peter (Zhanting) Gao 高占廷 — Electrical Engineering student at the University of British Columbia (B.A.Sc., expected June 2027). Embedded systems, closed-loop control, and renewable-energy engineering." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Peter (Zhanting) Gao · Electrical Engineering, UBC" />
+  <meta property="og:description" content="Embedded systems, closed-loop control and renewable-energy engineering. B.A.Sc. Electrical Engineering, UBC, graduating June 2027." />
+  <meta property="og:url" content="https://zgao36.github.io/" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23002145'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='600' fill='white' text-anchor='middle'%3EPG%3C/text%3E%3C/svg%3E" />
+  <script>
+    // Set theme + language before first paint to avoid a flash
+    (function () {
+      var d = document.documentElement, t = null, l = null;
+      try { t = localStorage.getItem("theme"); l = localStorage.getItem("lang"); } catch (e) {}
+      d.dataset.theme = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      l = l || ((navigator.language || "").toLowerCase().indexOf("zh") === 0 ? "zh" : "en");
+      d.dataset.lang = l;
+      d.lang = l === "zh" ? "zh-CN" : "en";
+      document.title = l === "zh" ? "高占廷 · UBC 电气工程" : "Peter Gao · Electrical Engineering, UBC";
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!--
+    Bilingual content: every translatable piece appears twice, as a sibling pair
+    marked lang="en" and lang="zh". CSS shows the pair matching <html data-lang>.
+  -->
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__logo"><span lang="en">PG</span><span lang="zh">高占廷</span></a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about"><span lang="en">About</span><span lang="zh">关于</span></a>
+        <a href="#experience"><span lang="en">Experience</span><span lang="zh">实习</span></a>
+        <a href="#projects"><span lang="en">Projects</span><span lang="zh">项目</span></a>
+        <a href="#coursework"><span lang="en">Coursework</span><span lang="zh">课程</span></a>
+        <a href="#skills"><span lang="en">Skills</span><span lang="zh">技能</span></a>
+      </nav>
+      <div class="nav__actions">
+        <button class="lang-btn" id="langToggle" aria-label="Switch language / 切换语言">
+          <span class="lang-btn__opt" data-opt="en">EN</span><span class="lang-btn__opt" data-opt="zh">中</span>
+        </button>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <a href="#contact" class="btn btn--small"><span lang="en">Contact</span><span lang="zh">联系我</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="eyebrow"><span class="status-dot"></span>
+            <span lang="en">Open to opportunities · Graduating June 2027</span>
+            <span lang="zh">正在寻找工作机会 · 2027 年 6 月毕业</span>
+          </p>
+          <h1 class="hero__name"><span lang="en">Peter Gao</span><span lang="zh">高占廷</span></h1>
+          <p class="hero__legal" lang="en">Legal name: Zhanting Gao</p>
+          <p class="hero__role">
+            <span lang="en">Electrical Engineering student at the University of British Columbia</span>
+            <span lang="zh">英属哥伦比亚大学（UBC）电气工程本科生</span>
+          </p>
+          <p class="hero__tagline" lang="en">
+            I build embedded systems that sense, decide and move — and I've applied engineering
+            in renewable energy, from photovoltaic simulation to wind-farm field surveys.
+          </p>
+          <p class="hero__tagline" lang="zh">
+            我做能感知、决策并驱动执行的嵌入式系统，也在新能源行业实践过工程设计——从光伏仿真到风电场现场勘察。
+          </p>
+          <div class="hero__cta">
+            <a href="#projects" class="btn"><span lang="en">See my projects</span><span lang="zh">查看项目</span></a>
+            <a href="#contact" class="btn btn--ghost"><span lang="en">Get in touch</span><span lang="zh">联系我</span></a>
+          </div>
+          <ul class="socials" aria-label="Links">
+            <li><a href="https://github.com/zgao36" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>
+            </a></li>
+            <li><a href="mailto:gztgzt6@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            </a></li>
+          </ul>
+        </div>
+
+        <aside class="focus" aria-label="Focus areas">
+          <p class="focus__label"><span lang="en">Focus areas</span><span lang="zh">能力方向</span></p>
+          <a class="focus__item" href="#projects">
+            <span class="focus__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>
+            </span>
+            <span>
+              <strong><span lang="en">Embedded &amp; Control</span><span lang="zh">嵌入式与控制</span></strong>
+              <small lang="en">Microcontrollers, sensor fusion, cascaded PID</small>
+              <small lang="zh">微控制器、传感器融合、级联 PID</small>
+            </span>
+          </a>
+          <a class="focus__item" href="#experience">
+            <span class="focus__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            </span>
+            <span>
+              <strong><span lang="en">Renewable Energy</span><span lang="zh">新能源工程</span></strong>
+              <small lang="en">PV design in PVsyst, wind-farm layouts, feasibility</small>
+              <small lang="zh">PVsyst 光伏设计、风电场布局、可行性分析</small>
+            </span>
+          </a>
+          <a class="focus__item" href="#projects">
+            <span class="focus__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="17" r="3"/><circle cx="17" cy="17" r="3"/><path d="M7 14V8h6l4 6M10 8V5"/></svg>
+            </span>
+            <span>
+              <strong><span lang="en">Mechatronic Integration</span><span lang="zh">机电系统整合</span></strong>
+              <small lang="en">Circuits, motors, wireless links, state machines</small>
+              <small lang="zh">电路、电机、无线通信、状态机</small>
+            </span>
+          </a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">01</span>
+          <span lang="en">About</span><span lang="zh">关于我</span>
+        </h2>
+        <div class="about">
+          <div class="about__text">
+            <p lang="en">
+              I'm pursuing a Bachelor of Applied Science in Electrical Engineering at the University of
+              British Columbia, with expected graduation in June 2027.
+            </p>
+            <p lang="en">
+              My project work centres on embedded systems, closed-loop control and robotic system
+              integration — taking sensors, feedback loops, motor drivers and wireless links and making
+              them work together as one reliable machine.
+            </p>
+            <p lang="en">
+              My two renewable-energy internships took that engineering mindset into industry:
+              photovoltaic system simulation, wind-farm layout drafting and field surveys, and
+              electricity-market research for project feasibility analysis.
+            </p>
+            <p lang="zh">我在英属哥伦比亚大学（UBC）攻读电气工程应用科学学士学位，预计于 2027 年 6 月毕业。</p>
+            <p lang="zh">我的项目经历集中在嵌入式系统、闭环控制和机器人系统整合——把传感器、反馈回路、电机驱动和无线通信组合成一台稳定运行的完整设备。</p>
+            <p lang="zh">两段新能源行业实习让我把工程思维带进了真实项目：光伏系统仿真、风电场布局制图与现场勘察，以及服务于项目可行性分析的电力市场研究。</p>
+          </div>
+          <dl class="facts">
+            <div lang="en"><dt>Legal name</dt><dd>Zhanting Gao</dd></div>
+            <div><dt><span lang="en">Based in</span><span lang="zh">所在地</span></dt><dd>Vancouver, BC</dd></div>
+            <div><dt><span lang="en">Degree</span><span lang="zh">学位</span></dt>
+              <dd><span lang="en">B.A.Sc., Electrical Engineering</span><span lang="zh">电气工程 应用科学学士</span></dd></div>
+            <div><dt><span lang="en">School</span><span lang="zh">学校</span></dt>
+              <dd><span lang="en">University of British Columbia</span><span lang="zh">英属哥伦比亚大学</span></dd></div>
+            <div><dt><span lang="en">Graduating</span><span lang="zh">毕业时间</span></dt>
+              <dd><span lang="en">June 2027 (expected)</span><span lang="zh">2027 年 6 月（预计）</span></dd></div>
+            <div><dt><span lang="en">Languages</span><span lang="zh">语言</span></dt>
+              <dd><span lang="en">Mandarin (native), English (proficient)</span><span lang="zh">普通话（母语）、英语（熟练）</span></dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">02</span>
+          <span lang="en">Internship Experience</span><span lang="zh">实习经历</span>
+        </h2>
+        <ol class="timeline">
+          <li class="timeline__item">
+            <div class="timeline__meta">
+              <span class="timeline__date"><span lang="en">Jul 2026 – Aug 2026</span><span lang="zh">2026.07 – 2026.08</span></span>
+              <span class="timeline__place"><span lang="en">Shanxi, China</span><span lang="zh">中国 · 山西</span></span>
+            </div>
+            <div class="timeline__body">
+              <h3>
+                <span lang="en">Assistant Market Development Specialist</span><span lang="zh">助理市场开发员</span>
+              </h3>
+              <p class="timeline__org">
+                <span lang="en">China Resources New Energy Investment Co., Ltd. — Shanxi Branch · Market Development Department</span>
+                <span lang="zh">华润新能源投资有限公司山西分公司 · 市场开发部</span>
+              </p>
+              <ul lang="en">
+                <li>Researched electricity-market policies, renewable-energy subsidy standards and regulatory frameworks across provinces, analysing how policy differences affect project profitability and long-term viability.</li>
+                <li>Took part in planning and feasibility analysis of new-energy generation projects, assessing site conditions, technology pathways and market potential.</li>
+                <li>Organised technical and commercial information to support the team's go/no-go project evaluations, working across engineering and business functions.</li>
+              </ul>
+              <ul lang="zh">
+                <li>研究各省市电力市场政策、新能源补贴标准与监管框架，分析政策差异对项目盈利能力和长期经济可行性的影响。</li>
+                <li>参与新能源发电项目的规划与可行性分析，评估场址条件、技术路线和市场潜力。</li>
+                <li>整理技术与商业信息，支持团队对项目是否继续推进的评估，参与跨职能协作。</li>
+              </ul>
+              <ul class="tags"><li>Power markets</li><li>Policy research</li><li>Feasibility analysis</li><li>Project planning</li></ul>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__meta">
+              <span class="timeline__date"><span lang="en">Jul 2025 – Aug 2025</span><span lang="zh">2025.07 – 2025.08</span></span>
+              <span class="timeline__place"><span lang="en">China · incl. Guizhou field site</span><span lang="zh">中国 · 含贵州现场</span></span>
+            </div>
+            <div class="timeline__body">
+              <h3>
+                <span lang="en">Assistant System Designer</span><span lang="zh">助理系统设计师</span>
+              </h3>
+              <p class="timeline__org">
+                <span lang="en">Design Institute of Guodian Nanjing Automation Co., Ltd.</span>
+                <span lang="zh">国电南京自动化股份有限公司 设计院</span>
+              </p>
+              <ul lang="en">
+                <li>Used PVsyst on distributed photovoltaic designs — module selection, array layout, shading analysis and energy-yield prediction — comparing installation angles across simulation scenarios.</li>
+                <li>Joined field surveys for the Tongren Wind Power Project in Guizhou, collecting topographic data with surveying instruments and assisting with preliminary turbine-siting assessment in complex terrain.</li>
+                <li>Drafted wind-farm layout drawings in AutoCAD from the collected field data, accounting for site spatial constraints.</li>
+              </ul>
+              <ul lang="zh">
+                <li>使用 PVsyst 参与分布式光伏项目设计，涉及组件选型、阵列布局、遮挡分析与发电量预测，并比较不同安装角度的仿真方案。</li>
+                <li>参与贵州铜仁风电项目现场勘察，使用专业测量设备采集地形资料，协助复杂地形下的风机布置初步评估。</li>
+                <li>根据现场资料，使用 AutoCAD 绘制风电场区布局图，并考虑场地空间约束。</li>
+              </ul>
+              <ul class="tags"><li>PVsyst</li><li>AutoCAD</li><li>Solar PV</li><li>Wind power</li><li>Field survey</li></ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">03</span>
+          <span lang="en">Engineering Projects</span><span lang="zh">工程项目</span>
+        </h2>
+
+        <!-- Featured: Self-balancing robot (ELEC 391 final report) -->
+        <article class="feature">
+          <div class="feature__main">
+            <p class="feature__date"><span lang="en">May 2026 – Jun 2026</span><span lang="zh">2026.05 – 2026.06</span></p>
+            <h3><span lang="en">Two-Wheel Self-Balancing Robot with BLE Control</span><span lang="zh">BLE 遥控双轮自平衡机器人</span></h3>
+            <p class="feature__meta">ELEC 391 · <span lang="en">Team of 4</span><span lang="zh">4 人团队</span></p>
+            <p class="feature__lead" lang="en">An inverted-pendulum robot that stays upright on two wheels, drives to commanded positions, turns, and takes commands from a phone over Bluetooth Low Energy.</p>
+            <p class="feature__lead" lang="zh">一台倒立摆式双轮机器人：保持直立、行驶到指定位置、转向，并通过低功耗蓝牙接收手机指令。</p>
+            <ul lang="en">
+              <li><strong>Three-loop control</strong> on an Arduino Nano 33 BLE Sense: a ~190 Hz PID balance loop, a 20 Hz encoder-based PD position loop that sets the target lean angle, and a P-only turning loop.</li>
+              <li><strong>Sensor fusion:</strong> complementary filter (K = 0.98) on the onboard BMI270 IMU sampled at 400 Hz, with automatic gyro-bias calibration at start-up; interrupt-driven wheel encoders.</li>
+              <li><strong>Motor drive:</strong> two DRV8871 drivers from a 12 V supply, voltage-divided encoder inputs to protect the 3.3 V logic, and per-motor deadband compensation measured on the assembled robot.</li>
+              <li><strong>Non-blocking BLE:</strong> custom service polled every few control cycles, with ramped position targets so commands never disturb loop timing.</li>
+            </ul>
+            <ul lang="zh">
+              <li><strong>三环控制：</strong>在 Arduino Nano 33 BLE Sense 上实现约 190 Hz 的 PID 平衡环、20 Hz 基于编码器的 PD 位置环（输出目标倾角），以及纯比例转向环。</li>
+              <li><strong>传感器融合：</strong>对板载 BMI270 IMU（400 Hz 采样）使用互补滤波（K = 0.98），开机自动标定陀螺仪零偏；车轮编码器采用中断计数。</li>
+              <li><strong>电机驱动：</strong>12 V 供电下的两路 DRV8871 驱动；编码器信号经分压保护 3.3 V 逻辑引脚；在整机上实测左右电机死区并分别补偿。</li>
+              <li><strong>非阻塞 BLE：</strong>自定义 BLE 服务每隔若干控制周期轮询一次，目标位置平滑过渡，避免指令干扰控制时序。</li>
+            </ul>
+            <div class="feature__note">
+              <span class="feature__note-label"><span lang="en">Engineering takeaway</span><span lang="zh">工程收获</span></span>
+              <p lang="en">After the midpoint demo the robot drifted and only balanced briefly. Rather than just retuning PID gains, the team fixed the root causes first — a rigid IMU mount, automatic calibration, measured motor deadband and a reinforced battery holder — then tuned the loops in order: balance → position → turning.</p>
+              <p lang="zh">中期演示时机器人会漂移、只能短暂平衡。团队没有只调 PID 参数，而是先解决根本原因——固定 IMU、改为自动标定、实测电机死区、加固电池座——再按“平衡 → 位置 → 转向”的顺序逐级整定。</p>
+            </div>
+            <ul class="tags"><li>Arduino Nano 33 BLE</li><li>BMI270 IMU</li><li>Cascaded PID</li><li>Complementary filter</li><li>DRV8871</li><li>Encoders</li><li>BLE</li></ul>
+          </div>
+          <div class="feature__stats">
+            <div class="stat">
+              <span class="stat__value">±3 cm</span>
+              <span class="stat__label"><span lang="en">stopping accuracy on 50 cm forward and backward runs</span><span lang="zh">50 cm 前进 / 后退任务的停车精度</span></span>
+            </div>
+            <div class="stat">
+              <span class="stat__value">&lt; 2 s</span>
+              <span class="stat__label"><span lang="en">per 45° turn under BLE control</span><span lang="zh">完成每个 45° 转向（BLE 控制）</span></span>
+            </div>
+            <div class="stat">
+              <span class="stat__value">5°</span>
+              <span class="stat__label"><span lang="en">ramp: climb, stop and descend while balancing; also climbed 10° and 15° ramps</span><span lang="zh">坡道：保持平衡完成上坡、停车、下坡；10° 和 15° 坡道可完成爬坡</span></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Featured: Coin-picking robot (ELEC 291 Project 2 report) -->
+        <article class="feature">
+          <div class="feature__main">
+            <p class="feature__date"><span lang="en">Jan 2025 – Apr 2025</span><span lang="zh">2025.01 – 2025.04</span></p>
+            <h3><span lang="en">Autonomous Coin-Picking Robot</span><span lang="zh">自主拾币机器人</span></h3>
+            <p class="feature__meta">ELEC 291 · <span lang="en">Team of 6</span><span lang="zh">6 人团队</span></p>
+            <p class="feature__lead" lang="en">A battery-powered robot that searches an area bounded by an AC perimeter wire, detects coins with a home-built metal detector and lifts them with a servo-driven electromagnet — by joystick, or fully on its own.</p>
+            <p class="feature__lead" lang="zh">一台电池供电的机器人：在交流周界线围出的区域内搜索，用自制金属探测器发现硬币，再用舵机驱动的电磁铁拾取——可摇杆遥控，也可完全自主运行。</p>
+            <ul lang="en">
+              <li><strong>Two microcontroller families:</strong> an STM32L051 remote (joystick, LCD, buzzer) as master and a PIC32MX robot as slave, linked by JDY-40 serial radios; the remote converts joystick input to motor PWM values so the robot can focus on precise motor and servo timing.</li>
+              <li><strong>Sensing circuits:</strong> a Colpitts-oscillator metal detector that registers coins by frequency shift, and inductor-plus-peak-detector boundary sensing of the AC perimeter, with thresholds set from oscilloscope and multimeter measurements.</li>
+              <li><strong>Actuation:</strong> discrete NMOS/PMOS H-bridge for PWM motor drive; a two-servo arm with an electromagnet, moved slowly after pickup so coins aren't dropped.</li>
+              <li><strong>Autonomy:</strong> a finite-state machine (forward → coin detected / perimeter → back off and turn) that alternates 45° and 90° turns to sweep the area and stops after 20 coins.</li>
+            </ul>
+            <ul lang="zh">
+              <li><strong>两种微控制器：</strong>STM32L051 遥控端（摇杆、LCD、蜂鸣器）作为主机，PIC32MX 机器人作为从机，通过 JDY-40 串口无线通信；遥控端负责把摇杆输入换算为电机 PWM，让机器人端专注于精确的电机与舵机时序。</li>
+              <li><strong>检测电路：</strong>基于 Colpitts 振荡器、通过频率变化识别硬币的金属探测器；以电感加峰值检波的方式检测交流周界线；阈值均由示波器和万用表实测确定。</li>
+              <li><strong>执行机构：</strong>分立 NMOS/PMOS H 桥实现 PWM 电机驱动；双舵机机械臂配合电磁铁拾取，拾起后缓慢移动以防硬币掉落。</li>
+              <li><strong>自主逻辑：</strong>有限状态机（前进 → 检测到硬币 / 周界 → 后退并转向），交替 45° 与 90° 转向以覆盖整个区域，拾满 20 枚后停止。</li>
+            </ul>
+            <div class="feature__note">
+              <span class="feature__note-label"><span lang="en">Design decisions</span><span lang="zh">设计取舍</span></span>
+              <p lang="en">Sending PWM duty values instead of on/off direction bits gave fine speed control (and enabled a "slow push" mode). Making the remote the radio master avoided data collisions, and separate batteries for the detectors and the electromagnet cut electrical and magnetic noise.</p>
+              <p lang="zh">传输 PWM 占空比而非简单的方向开关量，实现了精细调速（并支持“慢速推进”模式）；让遥控端担任无线主机避免了数据冲突；探测电路与电磁铁分开供电，降低了电气与磁场噪声。</p>
+            </div>
+            <ul class="tags"><li>STM32L051</li><li>PIC32MX</li><li>Colpitts oscillator</li><li>Peak detector</li><li>MOSFET H-bridge</li><li>JDY-40</li><li>FSM</li></ul>
+          </div>
+          <div class="feature__stats">
+            <div class="stat">
+              <span class="stat__value">~20</span>
+              <span class="stat__label"><span lang="en">randomly placed coins found and collected autonomously</span><span lang="zh">枚随机摆放的硬币，自主检测并拾取</span></span>
+            </div>
+            <div class="stat">
+              <span class="stat__value">2</span>
+              <span class="stat__label"><span lang="en">MCU families (ARM + MIPS) cooperating over radio</span><span lang="zh">种不同架构的微控制器（ARM + MIPS）无线协同</span></span>
+            </div>
+            <div class="stat">
+              <span class="stat__value"><span lang="en">2 modes</span><span lang="zh">2 种模式</span></span>
+              <span class="stat__label"><span lang="en">joystick control or full autonomy, switched with one button</span><span lang="zh">摇杆遥控或完全自主，一键切换</span></span>
+            </div>
+          </div>
+        </article>
+
+        <div class="cards">
+          <!-- Capstone: in progress -->
+          <article class="card">
+            <div class="card__head">
+              <h3><span lang="en">Autonomous Airship — Capstone</span><span lang="zh">自主飞艇 · 毕业设计</span></h3>
+              <span class="badge"><span lang="en">In progress</span><span lang="zh">进行中</span></span>
+            </div>
+            <p class="card__meta">ELEC 491 · <span lang="en">Team project</span><span lang="zh">团队项目</span></p>
+            <p lang="en">A small autonomous airship for agricultural monitoring and wildlife deterrence. The team is working through mass and power budgets (design target under 250 g), envelope and gondola options, on-board computing, video links, and risk analysis.</p>
+            <p lang="zh">用于农业监测与野生动物驱赶的小型自主飞艇。团队正在推进质量与功率预算（设计目标低于 250 g）、气囊与吊舱方案、机载计算、视频传输以及风险分析等工作。</p>
+            <ul class="tags"><li>Systems design</li><li>Power budget</li><li>Embedded</li></ul>
+          </article>
+
+          <!-- Software side project -->
+          <article class="card">
+            <div class="card__head">
+              <h3><span lang="en">Language-Learning &amp; Reading-Assistance Website</span><span lang="zh">语言学习与阅读辅助网站</span></h3>
+            </div>
+            <p class="card__meta">2024 – 2025 · <span lang="en">Co-founder</span><span lang="zh">联合创始人</span></p>
+            <p lang="en">A free public web tool: paste in any article and it extracts key phrases to help with reading comprehension and vocabulary. I worked on connecting the front-end interface with back-end data logic, and wrote an automation script that generates and publishes daily educational content.</p>
+            <p lang="zh">一个免费公开的网页工具：输入任意文章即可自动提取关键短语，辅助阅读理解与词汇学习。我参与前端界面与后端数据逻辑的整合，并编写自动化脚本生成和发布每日教育内容。</p>
+            <ul class="tags"><li>Full-stack</li><li>Automation</li><li>NLP tooling</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COURSEWORK ============ -->
+    <section class="section" id="coursework">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">04</span>
+          <span lang="en">Relevant Coursework</span><span lang="zh">相关课程</span>
+        </h2>
+        <p class="section__intro" lang="en">B.A.Sc. in Electrical Engineering, University of British Columbia · Sep 2023 – Jun 2027 (expected)</p>
+        <p class="section__intro" lang="zh">英属哥伦比亚大学 电气工程应用科学学士 · 2023.09 – 2027.06（预计）</p>
+
+        <div class="courses">
+          <div class="course-group">
+            <h3><span lang="en">Circuits, Electronics &amp; Electromagnetics</span><span lang="zh">电路、电子与电磁</span></h3>
+            <ul>
+              <li><code>ELEC 201</code> Circuit Analysis I</li>
+              <li><code>ELEC 202</code> Circuit Analysis II</li>
+              <li><code>ELEC 211</code> Engineering Electromagnetics</li>
+              <li><code>ELEC 301</code> Electronic Circuits</li>
+              <li><code>ELEC 315</code> Electronic Materials and Devices</li>
+            </ul>
+          </div>
+          <div class="course-group">
+            <h3><span lang="en">Signals, Control &amp; Power</span><span lang="zh">信号、控制与电能</span></h3>
+            <ul>
+              <li><code>ELEC 221</code> Signals and Systems</li>
+              <li><code>ELEC 341</code> Systems and Control</li>
+              <li><code>ELEC 342</code> Electro-Mechanical Energy Conversion and Transmission</li>
+            </ul>
+          </div>
+          <div class="course-group">
+            <h3><span lang="en">Computing &amp; Design Studios</span><span lang="zh">计算机与工程设计</span></h3>
+            <ul>
+              <li><code>CPEN 211</code> Computing Systems I</li>
+              <li><code>CPSC 259</code> Data Structures and Algorithms for Electrical Engineers</li>
+              <li><code>APSC 160</code> Introduction to Computation in Engineering Design</li>
+              <li><code>ELEC 291</code> Electrical Engineering Design Studio I</li>
+              <li><code>ELEC 391</code> Electrical Engineering Design Studio II</li>
+            </ul>
+          </div>
+          <div class="course-group">
+            <h3><span lang="en">Math, Data &amp; Professional Skills</span><span lang="zh">数学、数据与职业能力</span></h3>
+            <ul>
+              <li><code>MATH 256</code> Differential Equations</li>
+              <li><code>MATH 318</code> Probability with Physical Applications</li>
+              <li><code>DSCI 100</code> Introduction to Data Science</li>
+              <li><code>ELEC 281</code> Technical Communication</li>
+              <li><code>CIVL 250</code> Engineering and Sustainable Development</li>
+            </ul>
+          </div>
+          <div class="course-group course-group--now">
+            <h3><span lang="en">In progress</span><span lang="zh">本学期在读</span> <span class="course-group__when"><span lang="en">Sep – Dec 2026</span><span lang="zh">2026.09 – 12</span></span></h3>
+            <ul>
+              <li><code>ELEC 491</code> <span>Capstone Design Project <span class="course-note"><span lang="en">(full year)</span><span lang="zh">（全学年）</span></span></span></li>
+              <li><code>ELEC 311</code> Electromagnetic Fields and Waves</li>
+              <li><code>ELEC 453</code> Power System Analysis</li>
+              <li><code>ELEC 300R</code> Special Topics in Electrical Engineering</li>
+              <li><code>APSC 450</code> Professional Engineering Practice</li>
+            </ul>
+          </div>
+          <div class="course-group course-group--next">
+            <h3><span lang="en">Registered</span><span lang="zh">已注册</span> <span class="course-group__when"><span lang="en">Jan – Apr 2027</span><span lang="zh">2027.01 – 04</span></span></h3>
+            <ul>
+              <li><code>CPEN 355</code> Machine Learning with Engineering Applications</li>
+              <li><code>ELEC 441</code> Control Systems</li>
+              <li><code>ELEC 413</code> Semiconductor Lasers</li>
+              <li><code>ELEC 481</code> Economic Analysis of Engineering Projects</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">05</span>
+          <span lang="en">Technical Skills</span><span lang="zh">技术能力</span>
+        </h2>
+        <div class="skills">
+          <div class="skills__group">
+            <h3><span lang="en">Embedded &amp; Hardware</span><span lang="zh">嵌入式与硬件</span></h3>
+            <ul class="tags"><li>ARM / STM32</li><li>PIC32</li><li>Arduino</li><li>Interrupt-driven firmware</li><li>IMU &amp; encoders</li><li>Motor drivers · H-bridge · PWM</li><li>BLE · UART radio</li><li>Oscillator &amp; peak-detector circuits</li></ul>
+          </div>
+          <div class="skills__group">
+            <h3><span lang="en">Control &amp; Systems</span><span lang="zh">控制与系统</span></h3>
+            <ul class="tags"><li>Cascaded PID</li><li>Complementary filtering</li><li>Deadband compensation</li><li>Staged loop tuning</li><li>Finite-state machines</li><li>System integration</li></ul>
+          </div>
+          <div class="skills__group">
+            <h3><span lang="en">Energy &amp; Design Software</span><span lang="zh">能源与设计软件</span></h3>
+            <ul class="tags"><li>PVsyst</li><li>AutoCAD</li><li>Field surveys</li><li>Feasibility analysis</li></ul>
+          </div>
+          <div class="skills__group">
+            <h3><span lang="en">Programming &amp; Digital Design</span><span lang="zh">编程与数字设计</span></h3>
+            <ul class="tags"><li>C / C++</li><li>Python</li><li>MATLAB</li><li>Verilog / SystemVerilog</li><li>FPGA</li><li>Quartus</li><li>ModelSim</li><li>Git / GitHub</li></ul>
+          </div>
+          <div class="skills__group">
+            <h3><span lang="en">Lab Instruments</span><span lang="zh">仪器调试</span></h3>
+            <ul class="tags"><li>Oscilloscope</li><li>Multimeter</li><li>Function generator</li></ul>
+          </div>
+          <div class="skills__group">
+            <h3><span lang="en">Languages</span><span lang="zh">语言</span></h3>
+            <ul class="tags">
+              <li><span lang="en">Mandarin — native</span><span lang="zh">普通话 · 母语</span></li>
+              <li><span lang="en">English — proficient</span><span lang="zh">英语 · 熟练</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--contact" id="contact">
+      <div class="container contact">
+        <h2 class="contact__title"><span lang="en">Let's talk.</span><span lang="zh">期待与你交流</span></h2>
+        <p class="contact__text" lang="en">I'm interested in roles across embedded systems, control and renewable-energy engineering. The quickest ways to reach me are email and WeChat.</p>
+        <p class="contact__text" lang="zh">我对嵌入式系统、控制以及新能源工程方向的岗位都很感兴趣。欢迎通过邮件或微信联系我。</p>
+        <a href="mailto:gztgzt6@gmail.com" class="btn btn--large">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          gztgzt6@gmail.com
+        </a>
+
+        <ul class="contact-grid">
+          <li>
+            <a class="contact-item" href="tel:+12368658100">
+              <span class="contact-item__label"><span lang="en">Phone · Canada</span><span lang="zh">电话 · 加拿大</span></span>
+              <span class="contact-item__value">+1 236-865-8100</span>
+            </a>
+          </li>
+          <li>
+            <a class="contact-item" href="tel:+8618500158100">
+              <span class="contact-item__label"><span lang="en">Phone · China</span><span lang="zh">电话 · 中国</span></span>
+              <span class="contact-item__value">+86 185-0015-8100</span>
+            </a>
+          </li>
+          <li>
+            <button class="contact-item" type="button" data-copy="gzt7488">
+              <span class="contact-item__label">
+                <span lang="en">WeChat</span><span lang="zh">微信</span>
+                <span class="contact-item__hint" data-copied-text>
+                  <span lang="en">Click to copy</span><span lang="zh">点击复制</span>
+                </span>
+              </span>
+              <span class="contact-item__value">gzt7488</span>
+            </button>
+          </li>
+          <li>
+            <a class="contact-item" href="https://github.com/zgao36" target="_blank" rel="noopener">
+              <span class="contact-item__label">GitHub</span>
+              <span class="contact-item__value">github.com/zgao36 ↗</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> <span lang="en">Peter Gao</span><span lang="zh">高占廷</span></span>
+      <a href="#top"><span lang="en">Back to top ↑</span><span lang="zh">回到顶部 ↑</span></a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
