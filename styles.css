@@ -331,6 +331,7 @@ html[data-lang="zh"] .lang-btn__opt[data-opt="zh"] { background: var(--accent); 
 }
 .contact-item__hint { text-transform: none; letter-spacing: 0; font-weight: 500; color: var(--highlight); }
 .contact-item__value { font-size: 1rem; font-weight: 600; }
+.contact-grid > li:last-child:nth-child(odd) { grid-column: 1 / -1; }
 @media (max-width: 480px) { .contact-grid { grid-template-columns: 1fr; } }
 
 /* Footer */
