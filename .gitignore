@@ -6,3 +6,6 @@
 !index.html
 !styles.css
 !main.js
+!assets/
+assets/*
+!assets/peter.jpg

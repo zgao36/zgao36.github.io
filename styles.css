@@ -209,20 +209,27 @@ html[data-lang="en"] .lang-btn__opt[data-opt="en"],
 html[data-lang="zh"] .lang-btn__opt[data-opt="zh"] { background: var(--accent); color: var(--accent-text); }
 
 /* ============ Focus card (hero) ============ */
+.hero__photo { margin: 0; justify-self: end; width: 100%; max-width: 380px; }
+.hero__photo img {
+  width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover;
+  border-radius: 24px; box-shadow: var(--shadow);
+}
+
 .focus {
-  padding: 1.25rem; border-radius: 20px;
-  background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow);
+  margin-top: 56px; padding: 1.25rem 1.25rem 1rem; border-radius: 20px;
+  background: var(--surface); border: 1px solid var(--border);
 }
 .focus__label {
-  margin: .25rem .5rem .75rem; font-size: .75rem; font-weight: 600;
+  margin: 0 .5rem .5rem; font-size: .75rem; font-weight: 600;
   text-transform: uppercase; letter-spacing: .1em; color: var(--text-muted);
 }
+.focus__items { display: grid; grid-template-columns: repeat(3, 1fr); }
 .focus__item {
   display: flex; gap: .9rem; align-items: flex-start;
-  padding: .85rem .5rem; border-radius: 12px; text-decoration: none;
+  padding: .85rem .75rem; border-radius: 12px; text-decoration: none;
   transition: background .15s;
 }
-.focus__item + .focus__item { border-top: 1px dashed var(--border); }
+.focus__item + .focus__item { border-left: 1px dashed var(--border); border-radius: 0 12px 12px 0; }
 .focus__item:hover { background: var(--bg-alt); }
 .focus__icon {
   flex-shrink: 0; width: 40px; height: 40px; border-radius: 10px;
@@ -353,6 +360,10 @@ html[data-lang="zh"] .lang-btn__opt[data-opt="zh"] { background: var(--accent); 
   .nav__links { display: none; }
   .hero { padding: 56px 0 64px; }
   .hero__inner, .about, .feature { grid-template-columns: 1fr; gap: 32px; }
+  .hero__photo { justify-self: start; max-width: 420px; }
+  .focus { margin-top: 40px; }
+  .focus__items { grid-template-columns: 1fr; }
+  .focus__item + .focus__item { border-left: 0; border-top: 1px dashed var(--border); border-radius: 12px; }
   .feature__stats { gap: 10px; }
   .stat { display: flex; align-items: center; gap: 1rem; padding: .9rem 1.1rem; }
   .stat__value { flex: 0 0 auto; min-width: 88px; font-size: 1.6rem; }
